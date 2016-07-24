@@ -40,7 +40,7 @@ void MainWindow::watchDogTimerTick()
     else
     {
         StartJupiter();
-        watchdogTimer->start(3000);
+        watchdogTimer->start(5000);
     }
 
 }
@@ -51,7 +51,7 @@ void MainWindow::processUdp()
         QByteArray datagram;
         datagram.resize(udpSocket.pendingDatagramSize());
         udpSocket.readDatagram(datagram.data(), datagram.size());
-        watchdogTimer->start(2000);
+        watchdogTimer->start(5000);
     }
 }
 MainWindow::~MainWindow()
