@@ -20,7 +20,7 @@ MainWindow::MainWindow(QWidget *parent) :
 bool running = false;
 void MainWindow::StartJupiter()
 {
-    jupiter->start("\"C:\\Program Files\\HR2D\\Jupiter_2.2.exe\"");
+    jupiter->start("\"H:\\release version\\RadarSimulator.exe\"");
     running = true;
 }
 void MainWindow::StopJupiter()
@@ -35,7 +35,7 @@ void MainWindow::watchDogTimerTick()
     if(running)
     {
         StopJupiter();
-        watchdogTimer->start(200);
+        watchdogTimer->start(100);
     }
     else
     {
